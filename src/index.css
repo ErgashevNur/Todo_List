@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@keyframes spin-infinity {
+  0% {
+    transform: rotate(0deg);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+  }
+  25% {
+    border-top-width: 2px;
+    border-right-width: 8px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+  }
+  50% {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 8px;
+    border-left-width: 2px;
+  }
+  75% {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 8px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+  }
+}
+
+.animate-spin-infinity {
+  animation: spin-infinity 4s infinite linear;
+}
