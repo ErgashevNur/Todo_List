@@ -38,10 +38,7 @@ function Create({ setTodos }) {
         loop
         className="absolute left-0 top-0 z-0 h-[625px] w-full object-cover opacity-25 sm:h-[625px] md:h-[625px]"
       >
-        <source
-          src="Infinity Sign • Free Infinite Loop Motion Graphics.mp4"
-          type="video/mp4"
-        />
+        <source src="../public/Infiniti.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
