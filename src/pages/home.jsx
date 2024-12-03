@@ -17,7 +17,7 @@ function Home({ todos, editTodo, deleteTodo }) {
         className="absolute left-0 top-16 z-0 h-full w-full object-cover opacity-25"
       >
         <source
-          src="Infinity Sign • Free Infinite Loop Motion Graphics.mp4"
+          src="./public/Infinity Sign • Free Infinite Loop Motion Graphics.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
