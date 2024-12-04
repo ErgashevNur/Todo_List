@@ -21,17 +21,14 @@ const getTodosFromLocalStorage = () => {
 function App() {
   const [todos, setTodos] = useState(getTodosFromLocalStorage());
 
-  // Update localStorage whenever todos change
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  // Delete a todo by id
   const deleteTodo = (id) => {
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
-  // Edit a todo by id
   const editTodo = (updatedTodo) => {
     setTodos((prev) =>
       prev.map((todo) =>

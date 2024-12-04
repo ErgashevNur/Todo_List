@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Toast } from "../pages/toast";
+import { IoExit } from "react-icons/io5";
 
 function Modal({ todo, editTodo }) {
   const [title, setTitle] = useState("");
@@ -70,6 +71,36 @@ function Modal({ todo, editTodo }) {
               </button>
             </div>
           </form>
+        </div>
+      </dialog>
+
+      {/*  */}
+      <dialog id="show-todo" className="modal">
+        <div className="card w-96 bg-primary text-primary-content">
+          <div className="card-body">
+            <h2
+              className="card-title"
+              onChange={(e) => setTitle(e.target.value)}
+              value={title}
+            >
+              {title}
+            </h2>
+
+            <p
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+            >
+              {description}
+            </p>
+            <div className="card-actions justify-end">
+              <button
+                onClick={() => document.getElementById("show-todo").close()}
+                className="btn"
+              >
+                <IoExit className="size-6" />
+              </button>
+            </div>
+          </div>
         </div>
       </dialog>
     </>

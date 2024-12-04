@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
+import { IoExit } from "react-icons/io5";
 import { MdModeEdit } from "react-icons/md";
 import Modal from "../components/Modal";
 
@@ -30,9 +31,15 @@ function Home({ todos, editTodo, deleteTodo }) {
               <p>{todo.description.slice(0, 50)}...</p>
               <div className="card-actions justify-end">
                 <div className="mt-3 flex w-full justify-between">
-                  <Link to="" className="btn btn-outline btn-primary">
-                    Read More...
-                  </Link>
+                  <button
+                    className="btn btn-outline btn-primary"
+                    onClick={() => {
+                      setTodo(todo);
+                      document.getElementById("show-todo").showModal();
+                    }}
+                  >
+                    More...
+                  </button>
 
                   <button
                     className="btn btn-outline btn-error"
